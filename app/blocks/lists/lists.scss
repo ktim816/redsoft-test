@@ -1,0 +1,13 @@
+.list,
+.ul-list,
+.ol-list {
+  @include list;
+}
+
+.ul-list {
+  @include ullist;
+}
+
+.ol-list {
+  @include ollist;
+}

@@ -1,0 +1,19 @@
+mixin header()
+  +b.HEADER.header&attributes(attributes)
+    .container.header__content
+      +e.logo
+        +e.A(href='#').logo-link
+          img(src='./assets/images/header-logo.png')
+      +e.right
+        +e.NAV.nav
+          +e.UL.list
+            +e.LI.list-item
+              +e.A(href='#').list-link О сервисе
+            +e.LI.list-item
+              +e.A(href='#').list-link Функции
+            +e.LI.list-item
+              +e.A(href='#').list-link Возможности
+            +e.LI.list-item
+              +e.A(href='#').list-link Партнеры
+        +button('Оставить заявку')._transparent.header__button
+    block

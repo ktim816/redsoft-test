@@ -1,0 +1,17 @@
+mixin main()
+  +b.SECTION.main&attributes(attributes)
+    .container.main__content
+      +e.text-content.is-active
+        +e.H1.title Расширяем возможности предоставления качественных медицинских услуг
+        +e.P.description «Дневник здоровья» – новый сервис для самоконтроля показателей состояния здоровья, разработанный для участников программы «Мое здоровье».
+        +button('Узнать больше')._raspberry.main__button
+      +e.text-content
+        +e.H1.title Следить за здоровьем станет проще
+        +e.P.description Скоро вы сможете находиться на связи со своим лечащим врачом независимо от своего местоположения, вести дневник мониторинга самочувствия, получать рекомендации по плану лечения и многое другое.
+        +button('Узнать больше')._raspberry.main__button
+      +e.slider-pag
+        +e.BUTTON.slider-button.is-active
+          +e.SPAN.slider-dash
+        +e.BUTTON.slider-button
+          +e.SPAN.slider-dash
+    block

@@ -1,0 +1,36 @@
+/* Миксин для подключения шрифтов */
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: quote($font-family);
+    src: url($file-path + '.eot');
+    src:
+      url($file-path + '.eot?#iefix') format('embedded-opentype'),
+      url($file-path + '.woff2') format('woff2'),
+      url($file-path + '.woff') format('woff'),
+      url($file-path + '.ttf') format('truetype');
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+/* Образец подключения шрифта
+@include font-face('OpenSans', '../fonts/OpenSansRegular', 400, italic);
+*/
+
+@include font-face('CeraRoundPro', '../fonts/CeraRoundProLight', 300);
+@include font-face('CeraRoundPro', '../fonts/CeraRoundProRegular', 400);
+@include font-face('CeraRoundPro', '../fonts/CeraRoundProMedium', 500);
+@include font-face('CeraRoundPro', '../fonts/CeraRoundProBold', 700);
+@include font-face('Geometria', '../fonts/GeometriaMedium', 500);
+
+/* Соответствие письменного названия жирности числовому значению
+100 — Thin
+200 — Extra Light, Ultra Light
+300 — Light
+400 — Normal, Book, Regular (стандартный)
+500 — Medium
+600 — Semi Bold, Demi Bold
+700 — Bold
+800 — Extra Bold, Ultra Bold
+900 — Black, Heavy
+*/

@@ -6,9 +6,9 @@ mixin header()
           +e.IMG(src='./assets/images/header-logo.png').logo-img
       +e.right
         +navigation.__nav
-          +nav-item('#', 'О сервисе')
-          +nav-item('#', 'Функции')
-          +nav-item('#', 'Возможности')
-          +nav-item('#', 'Партнеры')
+          +nav-item('#about', 'О сервисе').js-anchor
+          +nav-item('#features', 'Функции').js-anchor
+          +nav-item('#diary', 'Возможности').js-anchor
+          +nav-item('#experts', 'Партнеры').js-anchor
         +button('Оставить заявку')(type='button')._transparent.header__button
     block

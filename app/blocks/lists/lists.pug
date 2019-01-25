@@ -16,6 +16,6 @@ mixin navigation()
       block
 
 mixin nav-item(url, text)
-  +e.LI.list-item&attributes(attributes)
-    +e.A(href= url).list-link #{text}
+  +e.LI.list-item
+    +e.A(href= url)&attributes(attributes).list-link #{text}
       block

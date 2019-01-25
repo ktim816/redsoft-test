@@ -11,7 +11,7 @@ block content
       +header
       +main
     main.main-content
-      +section._about
+      +section(id='about')._about
         +e.pulse-wrapper
           +e.SPAN.pulse-count 55
           +e.SPAN.pulse-count 68
@@ -33,7 +33,7 @@ block content
                 +list-item Делитесь результатами измерений со специалистами<br> для повышения эффективности лечения
                 +list-item Получайте рекомендации, созданные специально для вас
             +button('Оставить заявку')(type='button')._raspberry
-      +section._features
+      +section(id='features')._features
         +section-header('Функции приложения')
         +section-content
           +grid
@@ -70,7 +70,7 @@ block content
                   +e.img-circle
                     +e.IMG(src='./assets/images/features-icon_6.png').img
                 +e.P.text Получение уведомлений для выполнения назначений
-      +section._diary
+      +section(id='diary')._diary
         +section-header('Ведите персональный дневник мониторинга здоровья')
         +section-content
           +e.text-content
@@ -88,7 +88,7 @@ block content
               +e.P.description Получайте рекомендации, созданные специально для вас. Система, персонально настроенная под ваши требования, автоматически напомнит о необходимости выполнить рекомендации медицинского специалиста: принять препарат или выполнить измерения.
           +e.image-content
             +e.IMG(src='./assets/images/diary-img.png').img
-      +section._experts
+      +section(id='experts')._experts
         +section-content
           +e.img-block
             +e.IMG(src='./assets/images/experts-img.png').img

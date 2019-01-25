@@ -6,10 +6,10 @@ mixin footer()
           +e.A(href='#').logo-link
             +e.IMG(src='./assets/images/footer-logo.png').logo-img
         +navigation.__nav
-          +nav-item('#', 'О сервисе')
-          +nav-item('#', 'Функции')
-          +nav-item('#', 'Возможности')
-          +nav-item('#', 'Специалистам')
+          +nav-item('#about', 'О сервисе').js-anchor
+          +nav-item('#features', 'Функции').js-anchor
+          +nav-item('#diary', 'Возможности').js-anchor
+          +nav-item('#experts', 'Специалистам').js-anchor
           +nav-item('tel:+78005004549', '88005004549')
       +e.bottom
         +e.made-by Разработка сайта&nbsp;

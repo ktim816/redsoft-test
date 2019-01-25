@@ -11,4 +11,65 @@ block content
       +header
       +main
     main.main-content
-      +about
+      +section._about
+        +e.pulse-wrapper
+          +e.SPAN.pulse-count 55
+          +e.SPAN.pulse-count 68
+          +e.SPAN.pulse-count 72
+          +e.pulse-circle
+            +e.pulse-content
+              +e.IMG(src='./assets/images/pulse.png').pulse-curve
+              +e.IMG(src='./assets/images/heart.png').pulse-heart
+        +e.content
+          +e.img-block
+            +e.IMG(src='./assets/images/about-phone.png').img
+          +e.text-content
+            +e.H2.title Что такое «Дневник здоровья»?
+            +e.features
+              +e.P.description Дневник пациента — это удобный онлайн-сервис:
+              +e.UL.list
+                +e.LI.list-item Вносите результаты измерений вручную или с помощью<br> интегрированных приборов
+                +e.LI.list-item Ведите персональную медицинскую карту с историей<br> ваших измерений
+                +e.LI.list-item Делитесь результатами измерений со специалистами<br> для повышения эффективности лечения
+                +e.LI.list-item Получайте рекомендации, созданные специально для вас
+            +button('Оставить заявку')._raspberry
+      +section._features
+        +section-header('Функции приложения')
+        +section-content
+          +grid
+            +col({ xl: 4, sm: 12 })
+              +e.features-block
+                +e.img-block
+                  +e.img-circle
+                    +e.IMG(src='./assets/images/features-icon_1.png').img
+                +e.P.text Планирование графика приема лекарств
+              +e.features-block
+                +e.img-block
+                  +e.img-circle
+                    +e.IMG(src='./assets/images/features-icon_4.png').img
+                +e.P.text Удаленное предоставление измерений врачу
+            +col({ xl: 4, sm: 12 })
+              +e.features-block
+                +e.img-block
+                  +e.img-circle
+                    +e.IMG(src='./assets/images/features-icon_2.png').img
+                +e.P.text Уведомление врача об исполнении назначений
+              +e.features-block
+                +e.img-block
+                  +e.img-circle
+                    +e.IMG(src='./assets/images/features-icon_5.png').img
+                +e.P.text Общение с врачами через встроенный мессенджер
+            +col({ xl: 4, sm: 12 })
+              +e.features-block
+                +e.img-block
+                  +e.img-circle
+                    +e.IMG(src='./assets/images/features-icon_3.png').img
+                +e.P.text Ведение дневника самочувствия
+              +e.features-block
+                +e.img-block
+                  +e.img-circle
+                    +e.IMG(src='./assets/images/features-icon_6.png').img
+                +e.P.text Получение уведомлений для выполнения назначений
+      +section._diary
+      +section._experts
+      +section._cta

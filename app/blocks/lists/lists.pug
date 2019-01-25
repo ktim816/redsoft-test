@@ -1,7 +1,11 @@
 mixin ol-list()
-  ol.list&attributes(attributes)
+  +b.OL.ol-list&attributes(attributes)
     block
-  
+
 mixin ul-list()
-  ul.list&attributes(attributes)
+  +b.UL.ul-list&attributes(attributes)
+    block
+
+mixin list-item()
+  +b.LI.list-item&attributes(attributes)
     block

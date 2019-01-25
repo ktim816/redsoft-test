@@ -140,8 +140,6 @@
     }
 
     #{$b}__features {
-      @include text-list-item;
-
       margin-left: 3px;
       margin-bottom: 37px;
 
@@ -151,35 +149,21 @@
     }
 
     #{$b}__description {
+      @include text-list-item;
+
       margin-bottom: 17px;
     }
 
     #{$b}__list {
-      padding-left: 15px;
 
       @include screen('md-s', max) {
         padding-left: 0;
-      }
-    }
 
-    #{$b}__list-item {
-      position: relative;
+        .list-item {
 
-      &:not(:last-child) {
-        margin-bottom: 16px;
-      }
-
-      &::before {
-        @include pseudo;
-        @include size(5px);
-
-        top: 10px;
-        left: -16px;
-        border-radius: 50%;
-        background-color: #16afe0;
-
-        @include screen('md-s', max) {
-          display: none;
+          &::before {
+            display: none;
+          }
         }
       }
     }
@@ -376,5 +360,58 @@
       max-width: 100%;
     }
 
+  }
+
+  &_experts {
+    padding-top: 79px;
+    padding-bottom: 197px;
+    background-color: #f1f4fc;
+
+    @include screen('md-s', max) {
+      padding-bottom: 79px;
+    }
+
+    #{$b}__img-block {
+      position: absolute;
+      top: -163px;
+      left: -1010px;
+
+      @include screen('md-s', max) {
+        display: none;
+      }
+    }
+
+    #{$b}__img {
+      max-width: 100%;
+    }
+
+    #{$b}__content {
+      position: relative;
+      max-width: 600px;
+      margin-left: auto;
+
+      @include screen('md-s', max) {
+        text-align: center;
+        margin-right: auto;
+      }
+    }
+
+    #{$b}__title {
+      margin-bottom: 30px;
+    }
+
+    #{$b}__list {
+
+      @include screen('md-s', max) {
+        padding-left: 0;
+
+        .list-item {
+
+          &::before {
+            display: none;
+          }
+        }
+      }
+    }
   }
 }

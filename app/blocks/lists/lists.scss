@@ -2,10 +2,19 @@
 .ul-list,
 .ol-list {
   @include list;
+
+  padding-left: 15px;
 }
 
 .ul-list {
   @include ullist;
+}
+
+.list-item {
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
 }
 
 .ol-list {

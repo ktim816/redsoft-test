@@ -4,7 +4,7 @@
   background-image: url('../images/main-bg.png');
   background-position: 50% 50%;
   background-size: cover;
-  color: #fafaff;
+  color: $color-bg-light;
 
   @include screen('sm', max) {
     min-height: 700px;

@@ -173,7 +173,7 @@
     position: relative;
     padding-top: 149px;
     padding-bottom: 104px;
-    background-color: #f1f4fc;
+    background-color: $color-bg-gray;
 
     @include screen('md', max) {
       padding-top: 110px;
@@ -365,7 +365,7 @@
   &_experts {
     padding-top: 79px;
     padding-bottom: 197px;
-    background-color: #f1f4fc;
+    background-color: $color-bg-gray;
 
     @include screen('md-s', max) {
       padding-bottom: 79px;
@@ -411,6 +411,73 @@
             display: none;
           }
         }
+      }
+    }
+  }
+
+  &_cta {
+    padding-top: 140px;
+    padding-bottom: 160px;
+    background-color: #e3eaf5;
+    text-align: center;
+
+    @include screen('md', max) {
+      padding-top: 110px;
+      padding-bottom: 110px;
+    }
+
+    @include screen('sm', max) {
+      padding-top: 90px;
+      padding-bottom: 90px;
+    }
+
+    #{$b}__header {
+      margin-bottom: 40px;
+
+      @include screen('sm', max) {
+        margin-bottom: 30px;
+      }
+    }
+
+    #{$b}__content {
+      max-width: 558px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #{$b}__description {
+      @include heading-3;
+
+      margin-bottom: 54px;
+
+      @include screen('sm', max) {
+        margin-bottom: 45px;
+      }
+    }
+
+    #{$b}__form {
+      display: flex;
+
+      @include screen('sm', max) {
+        flex-direction: column;
+      }
+    }
+
+    #{$b}__input {
+      max-width: 360px;
+
+      @include screen('sm', max) {
+        max-width: 100%;
+        height: 60px;
+        margin-bottom: 25px;
+      }
+    }
+
+    #{$b}__button {
+      margin-left: auto;
+
+      @include screen('sm', max) {
+        margin-left: 0;
       }
     }
   }

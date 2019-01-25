@@ -1,14 +1,29 @@
 .input {
-  padding: 0 10px;
-  height: 40px;
+  padding: 0 19px;
   border: 1px solid $color-border;
+  border-radius: 30px;
   width: 100%;
   box-sizing: border-box;
   font-size: 14px;
+  font-weight: 300;
   line-height: 1;
-  border-radius: 0;
   min-height: 0;
-  background-color: white;
+  background-color: transparent;
+  color: $color-input;
+
+  &::placeholder {
+    color: $color-placeholder;
+    transform: translate3d(0, 0, 0);
+    transition: transform .2s ease, opacity .2s ease;
+  }
+
+  &:focus {
+
+    &::placeholder {
+      transform: translate3d(1%, 0, 0);
+      opacity: 0;
+    }
+  }
 }
 
 .inputbox {

@@ -25,11 +25,13 @@ $breakpoints: (
 // Цвета
 // ##########
 $color-light: #fff;
+$color-bg-light: #fafaff;
+$color-bg-gray: #f1f4fc;
 $color-basic: #60759d; // Основной цвет текста (применяется к body)
-$color-placeholder: #777; // Основной цвет для placeholder
-$color-input: #000; // Основной цвет input, select и textarea
+$color-placeholder: #a8b2bf; // Основной цвет для placeholder
+$color-input: #60759d; // Основной цвет input, select и textarea
 $color-main: #23b3e2; // Основной фирменный цвет
-$color-border: #ccc; // Основной цвет границ таблиц, секций
+$color-border: #4f699b; // Основной цвет границ таблиц, секций
 
 // ##########
 // Transitions

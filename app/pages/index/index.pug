@@ -32,7 +32,7 @@ block content
                 +list-item Ведите персональную медицинскую карту с историей<br> ваших измерений
                 +list-item Делитесь результатами измерений со специалистами<br> для повышения эффективности лечения
                 +list-item Получайте рекомендации, созданные специально для вас
-            +button('Оставить заявку')._raspberry
+            +button('Оставить заявку')(type='button')._raspberry
       +section._features
         +section-header('Функции приложения')
         +section-content
@@ -102,3 +102,9 @@ block content
                 +list-item Индивидуальная система уведомлений об изменении<br> состояния каждого пациента
                 +list-item Дополнительный сервис коммуникации, позволяющий активно<br> вовлекать пациента в процесс профилактики, лечения и реабилитации.
       +section._cta
+        +section-header('Получите бесплатный доступ к «Дневнику здоровья»')
+        +section-content
+          +e.P.description Оставьте свою электронную почту и вы узнаете о запуске данного сервиса первым!
+          +e.FORM(action='#' method='POST').form
+            +input(type='email' placeholder='Ваш E-mail').__input
+            +button('Отправить')._raspberry.__button

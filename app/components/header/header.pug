@@ -5,15 +5,10 @@ mixin header()
         +e.A(href='#').logo-link
           +e.IMG(src='./assets/images/header-logo.png').logo-img
       +e.right
-        +e.NAV.nav
-          +e.UL.list
-            +e.LI.list-item
-              +e.A(href='#').list-link О сервисе
-            +e.LI.list-item
-              +e.A(href='#').list-link Функции
-            +e.LI.list-item
-              +e.A(href='#').list-link Возможности
-            +e.LI.list-item
-              +e.A(href='#').list-link Партнеры
+        +navigation.__nav
+          +nav-item('#', 'О сервисе')
+          +nav-item('#', 'Функции')
+          +nav-item('#', 'Возможности')
+          +nav-item('#', 'Партнеры')
         +button('Оставить заявку')(type='button')._transparent.header__button
     block

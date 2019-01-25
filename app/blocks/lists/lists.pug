@@ -9,3 +9,13 @@ mixin ul-list()
 mixin list-item()
   +b.LI.list-item&attributes(attributes)
     block
+
+mixin navigation()
+  +b.NAV.navigation&attributes(attributes)
+    +e.UL.list
+      block
+
+mixin nav-item(url, text)
+  +e.LI.list-item&attributes(attributes)
+    +e.A(href= url).list-link #{text}
+      block

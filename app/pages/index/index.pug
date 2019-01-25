@@ -20,7 +20,7 @@ block content
             +e.pulse-content
               +e.IMG(src='./assets/images/pulse.png').pulse-curve
               +e.IMG(src='./assets/images/heart.png').pulse-heart
-        +e.content
+        +section-content
           +e.img-block
             +e.IMG(src='./assets/images/about-phone.png').img
           +e.text-content
@@ -71,5 +71,22 @@ block content
                     +e.IMG(src='./assets/images/features-icon_6.png').img
                 +e.P.text Получение уведомлений для выполнения назначений
       +section._diary
+        +section-header('Ведите персональный дневник мониторинга здоровья')
+        +section-content
+          +e.text-content
+            +e.text-block
+              +e.text-counter
+              +e.H3.head Хранение данных
+              +e.P.description Контролируйте и следите за динамикой изменения показателей вашего здоровья. Вносите результаты измерений медицинских показателей вручную или с помощью интегрированных приборов, храните историю измерений и отслеживайте динамику состояния здоровья
+            +e.text-block
+              +e.text-counter
+              +e.H3.head Сообшение информации врачу
+              +e.P.description Позвольте специалисту дистанционно следить за вашим здоровьем. Будьте на связи со специалистом - отправляйте информацию о своем самочувствии, обменивайтесь сообщениями и получайте рекомендации по вашему здоровью и лечению.
+            +e.text-block
+              +e.text-counter
+              +e.H3.head Напоминание о важном
+              +e.P.description Получайте рекомендации, созданные специально для вас. Система, персонально настроенная под ваши требования, автоматически напомнит о необходимости выполнить рекомендации медицинского специалиста: принять препарат или выполнить измерения.
+          +e.image-content
+            +e.IMG(src='./assets/images/diary-img.png').img
       +section._experts
       +section._cta

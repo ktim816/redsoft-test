@@ -3,7 +3,7 @@ mixin header()
     .container.header__content
       +e.logo
         +e.A(href='#').logo-link
-          img(src='./assets/images/header-logo.png')
+          +e.IMG(src='./assets/images/header-logo.png').logo-img
       +e.right
         +e.NAV.nav
           +e.UL.list

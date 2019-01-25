@@ -5,6 +5,7 @@
 // ##########
 $container-width: 1200px; // Максимальная ширина контейнера контента
 $container-padding: 20px; // Отступы слева и справа у контейнера
+$container-padding-sm: 15px; // Отступы слева и справа у контейнера
 $grid-container-width: 100%; // Ширина контейнера сетки
 $grid-cols: 12; // Количество колонок в сетке
 $grid-gap: 20px; // Расстояние между колонками
@@ -13,7 +14,9 @@ $grid-col-width: $grid-container-width/$grid-cols; // Ширина одной к
 $breakpoints: (
   'xl': 1920px,
   'lg': 1280px,
+  'md-l': 1080px,
   'md': 1024px,
+  'md-s': 940px,
   'sm': 768px,
   'xs': 480px
 );

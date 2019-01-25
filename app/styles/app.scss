@@ -18,6 +18,11 @@
   margin: 0 auto;
   max-width: 100%;
   box-sizing: border-box;
+
+  @include screen('sm', max) {
+    padding-left: $container-padding-sm;
+    padding-right: $container-padding-sm;
+  }
 }
 
 .main-content {

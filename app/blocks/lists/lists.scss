@@ -3,7 +3,7 @@
 .ol-list {
   @include list;
 
-  padding-left: 15px;
+  padding-left: 19px;
 }
 
 .ul-list {
@@ -19,43 +19,4 @@
   &:not(:last-child) {
     margin-bottom: 16px;
   }
-}
-
-.navigation {
-
-  &__list {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  &__list-item {
-    @include text-normal;
-  }
-
-  &__list-link {
-    position: relative;
-    padding: 5px;
-    color: inherit;
-
-    &::after {
-      @include pseudo;
-      @include size(4px);
-
-      bottom: 0;
-      left: 50%;
-      margin-left: -2px;
-      border-radius: 50%;
-      background-color: #fdfffc;
-      transform: scale(0);
-      transition: transform $ease-main;
-    }
-
-    &:hover {
-
-      &::after {
-        transform: scale(1);
-      }
-    }
-  }
-
 }

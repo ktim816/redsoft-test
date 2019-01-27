@@ -1,0 +1,58 @@
+.text-counter {
+  display: block;
+  position: relative;
+  padding-left: 61px;
+  text-align: left;
+  counter-increment: text-block;
+
+  $b: &;
+
+  @include screen('md', max) {
+    padding-left: 110px;
+  }
+
+  @include screen('xs', max) {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  &__counter {
+    @include size(121px);
+
+    position: absolute;
+    top: -30px;
+    left: -49px;
+    border: 1px solid rgba(#16afe0, .25);
+    border-right-color: transparent;
+    border-radius: 50%;
+
+    @include screen('md', max) {
+      @include size(100px);
+
+      left: 0;
+    }
+
+    @include screen('xs', max) {
+      display: none;
+    }
+
+    &::before {
+      @include pseudo($content: counter(text-block));
+      @include center-block;
+      @include text-counter;
+
+      opacity: .4;
+      color: #23b3e2;
+    }
+  }
+
+  &__head {
+    @include heading-3;
+
+    margin-bottom: 10px;
+  }
+
+  &__description {
+    @include text-list-item;
+  }
+}

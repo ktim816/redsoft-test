@@ -1,0 +1,10 @@
+mixin pulse()
+  +b.pulse&attributes(attributes)
+    +e.SPAN.count 55
+    +e.SPAN.count 68
+    +e.SPAN.count 72
+    +e.circle
+      +e.content
+        +e.IMG(src='./assets/images/pulse.png').curve
+        +e.IMG(src='./assets/images/heart.png').heart
+    block

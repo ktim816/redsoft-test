@@ -1,0 +1,15 @@
+.logo {
+  display: inline-block;
+  transition: opacity $ease-main;
+
+  $b: &;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &__img {
+    display: block;
+    max-width: 100%;
+  }
+}

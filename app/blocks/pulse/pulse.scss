@@ -1,0 +1,80 @@
+.pulse {
+  @include size(485px);
+
+  border: 1px solid rgba(#4c6fa6, .12);
+  border-radius: 50%;
+
+  $b: &;
+
+  @include screen('md', max) {
+    display: none;
+  }
+
+  &__count {
+    position: absolute;
+    font-family: $font-second;
+    font-size: 16px;
+    font-weight: 500;
+    color: #b8c9e5;
+
+    &::before {
+      @include pseudo;
+      @include size(10px);
+
+      border-radius: 50%;
+      background-color: #cbe2fb;
+      opacity: 0.6;
+    }
+
+    &:first-of-type {
+      top: 48%;
+      left: 11px;
+      margin-top: -5px;
+
+      &::before {
+        top: -10px;
+        left: -15px;
+      }
+    }
+
+    &:nth-of-type(2) {
+      top: 7px;
+      left: 43%;
+      margin-left: -4px;
+
+      &::before {
+        top: -8px;
+        left: -14px;
+      }
+    }
+
+    &:last-of-type {
+      top: 24%;
+      right: 46px;
+      margin-left: -5px;
+
+      &::before {
+        top: -8px;
+        right: -15px;
+      }
+    }
+  }
+
+  &__circle {
+    @include center-block;
+    @include size(279px);
+
+    border: 1px solid rgba(#4c6fa6, .3);
+    border-radius: 50%;
+  }
+
+  &__content {
+    @include center-block;
+  }
+
+  &__heart {
+    position: absolute;
+    top: 23px;
+    right: 45px;
+  }
+}

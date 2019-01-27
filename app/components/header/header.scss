@@ -1,5 +1,6 @@
 .header {
   display: block;
+  width: 100%;
   padding-top: 17px;
   padding-bottom: 17px;
 
@@ -8,10 +9,18 @@
     padding-bottom: 20px;
   }
 
+  &_absolute {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+  }
+
   $b: &;
 
   &__content {
     display: flex;
+    justify-content: space-between;
     align-items: center;
 
     @include screen('xs', max) {
@@ -22,42 +31,32 @@
 
   &__logo {
     margin-top: 10px;
+    margin-right: 50px;
+
+    @include screen('md-l', max) {
+      margin-top: 0;
+      margin-right: 0;
+    }
 
     @include screen('xs', max) {
-      margin-top: 0;
       margin-bottom: 15px;
     }
-  }
-
-  &__logo-link {
-    transition: opacity $ease-main;
-
-    &:hover {
-      opacity: 0.8;
-    }
-  }
-
-  &__logo-img {
-    max-width: 100%;
   }
 
   &__right {
     display: flex;
     align-items: center;
-    margin-left: auto;
-
-    @include screen('xs', max) {
-      margin-left: 0;
-    }
   }
 
   &__nav {
 
-    .navigation__list-item {
-      color: #fdfffc;
+    .nav-list {
 
-      &:not(:last-child) {
-        margin-right: 42px;
+      &__item {
+
+        &:not(:last-child) {
+          margin-right: 42px;
+        }
       }
     }
 

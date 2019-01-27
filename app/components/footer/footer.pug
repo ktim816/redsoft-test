@@ -1,16 +1,12 @@
 mixin footer()
+  - var navData = getData('footer-nav.json')
   +b.FOOTER.footer&attributes(attributes)
     .container
       +e.main
         +e.logo
-          +e.A(href='#').logo-link
-            +e.IMG(src='./assets/images/footer-logo.png').logo-img
-        +navigation.__nav
-          +nav-item('#about', 'О сервисе').js-anchor
-          +nav-item('#features', 'Функции').js-anchor
-          +nav-item('#diary', 'Возможности').js-anchor
-          +nav-item('#experts', 'Специалистам').js-anchor
-          +nav-item('tel:+78005004549', '88005004549')
+          +logo('/', './assets/images/footer-logo.png')
+        +e.NAV.nav
+          +nav-list(navData)
       +e.bottom
         +e.made-by Разработка сайта&nbsp;
           a(href='https://redsoft.ru' target='_blank').creator Redsoft

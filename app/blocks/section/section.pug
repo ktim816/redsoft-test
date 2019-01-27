@@ -3,6 +3,10 @@ mixin section()
     .container.js-sr.js-sr_1
       block
 
+mixin section-without-container()
+  +b.SECTION.section&attributes(attributes)
+    block
+
 mixin section-header(title)
   +e.header&attributes(attributes)
     +e.H2.title!= title

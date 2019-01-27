@@ -7,6 +7,52 @@
     @include heading-2;
   }
 
+  &_main {
+    position: relative;
+    padding-top: 94px;
+    padding-bottom: 48px;
+    background-image: url('../images/main-bg.png');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+
+    @include screen('xs', max) {
+      padding-top: 153px;
+    }
+
+    #{$b}__bg-img {
+      @include fill-img;
+
+      z-index: -1;
+      opacity: 0;
+      transition: opacity .4s ease;
+
+      &.is-active {
+        opacity: 1;
+      }
+    }
+
+    .container {
+      padding-top: 86px;
+
+      @include screen('xs', max) {
+        padding-top: 45px;
+      }
+    }
+
+    #{$b}__content {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 522px;
+
+      @include screen('sm', max) {
+        min-height: 100%;
+      }
+    }
+  }
+
   &_about {
     padding-top: 146px;
     padding-bottom: 77px;
@@ -23,86 +69,10 @@
       position: relative;
     }
 
-    #{$b}__pulse-wrapper {
-      @include size(485px);
-
+    #{$b}__pulse {
       position: absolute;
       right: -248px;
       bottom: -255px;
-      border: 1px solid rgba(#4c6fa6, .12);
-      border-radius: 50%;
-
-      @include screen('md', max) {
-        display: none;
-      }
-    }
-
-    #{$b}__pulse-count {
-      position: absolute;
-      font-family: $font-second;
-      font-size: 16px;
-      font-weight: 500;
-      color: #b8c9e5;
-
-      &::before {
-        @include pseudo;
-        @include size(10px);
-
-        border-radius: 50%;
-        background-color: #cbe2fb;
-        opacity: 0.6;
-      }
-
-      &:first-of-type {
-        top: 48%;
-        left: 11px;
-        margin-top: -5px;
-
-        &::before {
-          top: -10px;
-          left: -15px;
-        }
-      }
-
-      &:nth-of-type(2) {
-        top: 7px;
-        left: 43%;
-        margin-left: -4px;
-
-        &::before {
-          top: -8px;
-          left: -14px;
-        }
-      }
-
-      &:last-of-type {
-        top: 24%;
-        right: 46px;
-        margin-left: -5px;
-
-        &::before {
-          top: -8px;
-          right: -15px;
-        }
-      }
-    }
-
-    #{$b}__pulse-circle {
-      @include center-block;
-      @include size(279px);
-
-      border: 1px solid rgba(#4c6fa6, .3);
-      border-radius: 50%;
-    }
-
-    #{$b}__pulse-content {
-      @include center-block;
-    }
-
-    #{$b}__pulse-heart {
-      position: absolute;
-      top: 23px;
-      right: 45px;
     }
 
     #{$b}__content {
@@ -140,18 +110,18 @@
     }
 
     #{$b}__features {
-      margin-left: 3px;
       margin-bottom: 37px;
+    }
+
+    #{$b}__note {
+      @include text-list-item;
+
+      margin-left: 3px;
+      margin-bottom: 17px;
 
       @include screen('md-s', max) {
         margin-left: 0;
       }
-    }
-
-    #{$b}__description {
-      @include text-list-item;
-
-      margin-bottom: 17px;
     }
 
     #{$b}__list {
@@ -211,37 +181,6 @@
 
     #{$b}__features-block {
       margin-bottom: 64px;
-      text-align: center;
-
-      @include screen('xs', max) {
-        margin-bottom: 35px;
-      }
-    }
-
-    #{$b}__img-block {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 8px;
-      min-height: 100px;
-    }
-
-    #{$b}__img-circle {
-      @include size(78px);
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border: 1px solid rgba(#16afe0, .25);
-      border-radius: 50%;
-    }
-
-    #{$b}__text {
-      @include text-list-item;
-
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 226px;
     }
   }
 
@@ -264,7 +203,7 @@
       text-align: center;
 
       @include screen('xs', max) {
-        margin-bottom: 65px;
+        margin-bottom: 55px;
       }
     }
 
@@ -283,67 +222,14 @@
     }
 
     #{$b}__text-block {
-      position: relative;
-      padding-left: 61px;
-      text-align: left;
-      counter-increment: text-block;
-
-      @include screen('md', max) {
-        padding-left: 110px;
-      }
-
-      @include screen('xs', max) {
-        padding-left: 0;
-        text-align: center;
-      }
 
       &:not(:last-child) {
         margin-bottom: 78px;
 
         @include screen('md', max) {
-          margin-bottom: 65px;
+          margin-bottom: 55px;
         }
       }
-    }
-
-    #{$b}__text-counter {
-      @include size(121px);
-
-      position: absolute;
-      top: -30px;
-      left: -49px;
-      border: 1px solid rgba(#16afe0, .25);
-      border-right-color: transparent;
-      border-radius: 50%;
-
-      @include screen('md', max) {
-        @include size(100px);
-
-        left: 0;
-      }
-
-      @include screen('xs', max) {
-        display: none;
-      }
-
-      &::before {
-        @include pseudo($content: counter(text-block));
-        @include center-block;
-        @include text-counter;
-
-        opacity: .4;
-        color: #23b3e2;
-      }
-    }
-
-    #{$b}__head {
-      @include heading-3;
-
-      margin-bottom: 10px;
-    }
-
-    #{$b}__description {
-      @include text-list-item;
     }
 
     #{$b}__image-content {
@@ -364,19 +250,35 @@
 
   &_experts {
     padding-top: 79px;
-    padding-bottom: 197px;
+    padding-bottom: 81px;
     background-color: $color-bg-gray;
 
     @include screen('md-s', max) {
       padding-bottom: 79px;
     }
 
-    #{$b}__img-block {
-      position: absolute;
-      top: -163px;
-      left: -1010px;
+    .container {
+      width: 1600px;
 
-      @include screen('md-s', max) {
+      @include screen('xl-s', max) {
+        width: $container-width;
+      }
+    }
+
+    #{$b}__content {
+      position: relative;
+      display: flex;
+    }
+
+    #{$b}__img-block {
+      margin-top: -164px;
+      margin-right: 30px;
+
+      @include screen('xl-s', max) {
+        margin-top: 0;
+      }
+
+      @include screen('lg-s', max) {
         display: none;
       }
     }
@@ -385,24 +287,26 @@
       max-width: 100%;
     }
 
-    #{$b}__content {
-      position: relative;
-      max-width: 600px;
-      margin-left: auto;
+    #{$b}__text-content {
 
-      @include screen('md-s', max) {
+      @include screen('lg-s', max) {
         text-align: center;
+        margin-left: auto;
         margin-right: auto;
       }
     }
 
     #{$b}__title {
       margin-bottom: 30px;
+
+      @include screen('xl-s', max) {
+        margin-bottom: 15px;
+      }
     }
 
     #{$b}__list {
 
-      @include screen('md-s', max) {
+      @include screen('lg-s', max) {
         padding-left: 0;
 
         .list-item {
@@ -446,8 +350,9 @@
     }
 
     #{$b}__description {
-      @include heading-3;
+      @include text-descr;
 
+      font-weight: 500;
       margin-bottom: 54px;
 
       @include screen('sm', max) {

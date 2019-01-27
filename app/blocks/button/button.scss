@@ -1,51 +1,62 @@
 .button {
   display: inline-block;
+  border-width: 2px;
+  border-style: solid;
   white-space: nowrap;
   color: #fdfffc;
   cursor: pointer;
 
+  $b: &;
 
-  &_transparent {
+  &_rounded {
+    border-radius: 30px;
+  }
+
+  &_size-normal {
+    height: 60px;
+
+    @include screen('sm', max) {
+      height: 55px;
+    }
+  }
+
+  &_theme-transparent {
     @include text-normal;
+
+    $color-button: #5489c3;
 
     padding-left: 33px;
     padding-right: 33px;
-    height: 60px;
-    border-radius: 30px;
-    border: 2px solid #5489c3;
+    border-color: $color-button;
     background-color: transparent;
     transition: background-color $ease-main;
 
     @include screen('sm', max) {
       padding-left: 25px;
       padding-right: 25px;
-      height: 55px;
     }
 
     &:hover {
-      background-color: #5489c3;
+      background-color: $color-button;
     }
   }
 
-  &_raspberry {
+  &_theme-raspberry {
     @include text-button;
+
+    $color-button: #e70067;
+    $color-button_hover: #c9005a;
 
     padding-left: 29px;
     padding-right: 29px;
-    height: 60px;
-    border-radius: 30px;
-    border: 2px solid #e70067;
-    background-color: #e70067;
+    border-color: $color-button;
+    background-color: $color-button;
     transition: background-color $ease-main, border-color $ease-main, box-shadow $ease-main;
-
-    @include screen('sm', max) {
-      height: 55px;
-    }
 
     &:hover {
       box-shadow: 0 6px 33px 7px rgba(231, 0, 103, 0.36);
-      background-color: #c9005a;
-      border-color: #c9005a;
+      background-color: $color-button_hover;
+      border-color: $color-button_hover;
     }
   }
 }

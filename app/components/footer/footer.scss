@@ -8,6 +8,7 @@
 
   &__main {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     padding-bottom: 45px;
     border-bottom: 1px solid #335b91;
@@ -19,43 +20,36 @@
   }
 
   &__logo {
+    margin-right: 40px;
 
     @include screen('md', max) {
+      margin-right: 0;
       margin-bottom: 20px;
     }
   }
 
-  &__logo-link {
-    transition: opacity $ease-main;
-
-    &:hover {
-      opacity: 0.8;
-    }
-  }
-
   &__nav {
-    margin-left: auto;
 
     @include screen('md', max) {
+      margin-left: auto;
       margin-right: auto;
     }
 
-    .navigation__list {
+    .nav-list {
 
       @include screen('md', max) {
         flex-direction: column;
       }
-    }
 
-    .navigation__list-item {
-      color: #fdfffc;
+      &__item {
 
-      &:not(:last-child) {
-        margin-right: 61px;
+        &:not(:last-child) {
+          margin-right: 61px;
 
-        @include screen('md', max) {
-          margin-right: 0;
-          margin-bottom: 10px;
+          @include screen('md', max) {
+            margin-right: 0;
+            margin-bottom: 10px;
+          }
         }
       }
     }

@@ -1,0 +1,6 @@
+mixin text-counter(head, description)
+  +b.text-counter&attributes(attributes)
+    +e.counter
+    +e.H3.head!= head
+    +e.P.description!= description
+    block

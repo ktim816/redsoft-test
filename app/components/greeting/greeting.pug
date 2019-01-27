@@ -1,0 +1,6 @@
+mixin greeting(title, description)
+  +b.greeting&attributes(attributes)
+    +e.H1.title!= title
+    +e.P.description!= description
+    +button('Узнать больше')(type='button')._size-normal._rounded._theme-raspberry.main__button
+    block

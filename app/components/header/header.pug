@@ -1,14 +1,12 @@
 mixin header()
+  - var navData = getData('header-nav.json');
   +b.HEADER.header&attributes(attributes)
-    .container.header__content
-      +e.logo
-        +e.A(href='#').logo-link
-          +e.IMG(src='./assets/images/header-logo.png').logo-img
-      +e.right
-        +navigation.__nav
-          +nav-item('#about', 'О сервисе').js-anchor
-          +nav-item('#features', 'Функции').js-anchor
-          +nav-item('#diary', 'Возможности').js-anchor
-          +nav-item('#experts', 'Партнеры').js-anchor
-        +button('Оставить заявку')(type='button')._transparent.header__button
+    .container
+      +e.content
+        +e.logo
+          +logo('/', './assets/images/header-logo.png')
+        +e.right
+          +e.NAV.nav
+            +nav-list(navData)
+          +button('Оставить заявку')(type='button')._size-normal._rounded._theme-transparent.header__button
     block

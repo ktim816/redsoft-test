@@ -1,0 +1,7 @@
+mixin feature-block(imgSrc, text)
+  +b.feature-block&attributes(attributes)
+    +e.img-wrap
+      +e.img-circle
+        +e.IMG(src= imgSrc).img
+    +e.P.text!= text
+    block

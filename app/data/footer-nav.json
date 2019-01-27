@@ -1,0 +1,27 @@
+{
+  "link1": {
+    "href": "#about",
+    "className": "js-anchor",
+    "name": "О сервисе"
+  },
+  "link2": {
+    "href": "#features",
+    "className": "js-anchor",
+    "name": "Функции"
+  },
+  "link3": {
+    "href": "#diary",
+    "className": "js-anchor",
+    "name": "Возможности"
+  },
+  "link4": {
+    "href": "#experts",
+    "className": "js-anchor",
+    "name": "Специалистам"
+  },
+  "link5": {
+    "href": "tel:+78005004549",
+    "className": "",
+    "name": "88005004549"
+  }
+}

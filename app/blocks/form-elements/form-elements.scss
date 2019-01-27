@@ -1,7 +1,6 @@
 .input {
   padding: 0 19px;
   border: 1px solid $color-border;
-  border-radius: 30px;
   width: 100%;
   box-sizing: border-box;
   font-size: 14px;
@@ -10,6 +9,10 @@
   min-height: 0;
   background-color: transparent;
   color: $color-input;
+
+  &_rounded {
+    border-radius: 30px;
+  }
 
   &::placeholder {
     color: $color-placeholder;

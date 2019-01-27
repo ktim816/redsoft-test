@@ -1,0 +1,10 @@
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  $b: &;
+
+  &__item {
+    @include text-nav;
+  }
+}

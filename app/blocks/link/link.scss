@@ -10,6 +10,34 @@
     }
   }
 
+  &_nav {
+    position: relative;
+    padding: 5px;
+
+    &::after {
+      $dot-size: 4px;
+
+      @include pseudo;
+      @include size($dot-size);
+
+      bottom: 0;
+      left: 50%;
+      margin-left: floor(-$dot-size/2);
+      border-radius: 50%;
+      background-color: $color-link;
+      transform: scale(0);
+      transition: transform $ease-main;
+    }
+
+    &.is-active,
+    &:hover {
+
+      &::after {
+        transform: scale(1);
+      }
+    }
+  }
+
   &_icon {
     position: relative;
     padding-left: 25px;

@@ -1,0 +1,35 @@
+.greeting {
+  display: block;
+  width: 100%;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  transform: translate3d(0, 4%, 0);
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: transform .4s ease,
+  opacity .4s ease;
+
+  $b: &;
+
+  &.is-active {
+    transform: translate3d(0, 0, 0);
+    height: auto;
+    overflow: visible;
+    opacity: 1;
+  }
+
+  &__title {
+    @include heading-1;
+
+    margin-bottom: 35px;
+  }
+
+  &__description {
+    @include text-descr;
+
+    margin-bottom: 48px;
+  }
+}

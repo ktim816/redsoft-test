@@ -58,10 +58,7 @@
     #{$b}__inner {
 
       &:first-child {
-        transform:
-          translate3d(0,
-          floor(($burger-box-size/2) - ($burger-inner-height/2)), 0)
-          rotate(45deg);
+        transform: translate3d(0, floor(($burger-box-size/2) - ($burger-inner-height/2)), 0) rotate(45deg);
       }
 
       &:nth-child(2) {
@@ -69,10 +66,7 @@
       }
 
       &:last-child {
-        transform:
-          translate3d(0,
-          floor((-$burger-box-size/2) - (-$burger-inner-height/2)), 0)
-          rotate(-45deg);
+        transform: translate3d(0, floor((-$burger-box-size/2) - (-$burger-inner-height/2)), 0) rotate(-45deg);
       }
     }
   }

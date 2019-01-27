@@ -54,7 +54,7 @@
     transition: background-color $ease-main, border-color $ease-main, box-shadow $ease-main;
 
     &:hover {
-      box-shadow: 0 6px 33px 7px rgba(231, 0, 103, 0.36);
+      box-shadow: 0 6px 33px 7px rgba(231, 0, 103, .36);
       background-color: $color-button_hover;
       border-color: $color-button_hover;
     }

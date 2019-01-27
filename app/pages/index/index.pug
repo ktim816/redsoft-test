@@ -1,7 +1,7 @@
 extends ../../layouts/default
 
 block head
-  - var pageTitle = 'Моё здоровье'
+  - var pageTitle = 'Моё здоровье - Главная'
 
 block content
   +header._absolute
@@ -25,12 +25,12 @@ block content
           +e.features
             +e.P.note Дневник пациента — это удобный онлайн-сервис:
             +ul-list.__list
-              +list-item Вносите результаты измерений вручную или с помощью<br> интегрированных приборов
-              +list-item Ведите персональную медицинскую карту с историей<br> ваших измерений
-              +list-item Делитесь результатами измерений со специалистами<br> для повышения эффективности лечения
+              +list-item Вносите результаты измерений вручную или с помощью интегрированных приборов
+              +list-item Ведите персональную медицинскую карту с историей ваших измерений
+              +list-item Делитесь результатами измерений со специалистами для повышения эффективности лечения
               +list-item Получайте рекомендации, созданные специально для вас
           +button('Оставить заявку')(type='button')._size-normal._rounded._theme-raspberry
-    +section(id='features')._features
+    +section(id='features')._theme-light-gray._features
       +section-header('Функции приложения')
       +section-content
         +grid
@@ -52,7 +52,7 @@ block content
           +text-counter('Напоминание о важном', 'Получайте рекомендации, созданные специально для вас. Система, персонально настроенная под ваши требования, автоматически напомнит о необходимости выполнить рекомендации медицинского специалиста: принять препарат или выполнить измерения.').__text-block
         +e.image-content
           +e.IMG(src='./assets/images/diary-img.png').img
-    +section(id='experts')._experts
+    +section(id='experts')._theme-light-gray._experts
       +section-content
         +e.img-block
           +e.IMG(src='./assets/images/experts-img.png').img
@@ -65,7 +65,7 @@ block content
               +list-item Наличие алгоритмов автоматического анализа<br> поступающей информации
               +list-item Индивидуальная система уведомлений об изменении<br> состояния каждого пациента
               +list-item Дополнительный сервис коммуникации, позволяющий активно<br> вовлекать пациента в процесс профилактики, лечения и реабилитации.
-    +section._cta
+    +section._theme-gray._cta
       +section-header('Получите бесплатный доступ к «Дневнику здоровья»')
       +section-content
         +e.P.description Оставьте свою электронную почту и вы узнаете о запуске данного сервиса первым!

@@ -7,6 +7,14 @@
     @include heading-2;
   }
 
+  &_theme-light-gray {
+    background-color: $color-bg-gray;
+  }
+
+  &_theme-gray {
+    background-color: #e3eaf5;
+  }
+
   &_main {
     position: relative;
     padding-top: 94px;
@@ -110,6 +118,8 @@
     }
 
     #{$b}__features {
+      width: 100%;
+      max-width: 480px;
       margin-bottom: 37px;
     }
 
@@ -125,7 +135,6 @@
     }
 
     #{$b}__list {
-
       @include screen('md-s', max) {
         padding-left: 0;
 
@@ -143,7 +152,6 @@
     position: relative;
     padding-top: 149px;
     padding-bottom: 104px;
-    background-color: $color-bg-gray;
 
     @include screen('md', max) {
       padding-top: 110px;
@@ -160,13 +168,11 @@
     }
 
     .grid {
-
       @include screen('sm', max) {
         display: flex;
       }
 
       &__col {
-
         @include screen('sm', max) {
           display: flex;
           justify-content: space-around;
@@ -233,7 +239,6 @@
     }
 
     #{$b}__image-content {
-
       @include screen('md', max) {
         display: none;
       }
@@ -245,7 +250,6 @@
       right: -72px;
       max-width: 100%;
     }
-
   }
 
   &_experts {
@@ -288,7 +292,6 @@
     }
 
     #{$b}__text-content {
-
       @include screen('lg-s', max) {
         text-align: center;
         margin-left: auto;
@@ -305,7 +308,6 @@
     }
 
     #{$b}__list {
-
       @include screen('lg-s', max) {
         padding-left: 0;
 
@@ -322,7 +324,6 @@
   &_cta {
     padding-top: 140px;
     padding-bottom: 160px;
-    background-color: #e3eaf5;
     text-align: center;
 
     @include screen('md', max) {

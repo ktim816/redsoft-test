@@ -29,14 +29,12 @@
   }
 
   &__nav {
-
     @include screen('md', max) {
       margin-left: auto;
       margin-right: auto;
     }
 
     .nav-list {
-
       @include screen('md', max) {
         flex-direction: column;
       }
@@ -73,5 +71,4 @@
       }
     }
   }
-
 }

@@ -1,5 +1,6 @@
 .section {
   display: block;
+  position: relative;
 
   $b: &;
 
@@ -7,11 +8,20 @@
     @include heading-2;
   }
 
-  &_theme-light-gray {
+  &__wrapper {
+    width: 100%;
+    position: relative;
+
+    &_light-gray {
+      background-color: $color-bg-gray;
+    }
+  }
+
+  &_light-gray {
     background-color: $color-bg-gray;
   }
 
-  &_theme-gray {
+  &_gray {
     background-color: #e3eaf5;
   }
 
@@ -77,6 +87,18 @@
       position: relative;
     }
 
+    #{$b}__bg-img {
+      position: absolute;
+      top: -240px;
+      left: -330px;
+      max-width: 100%;
+      pointer-events: none;
+
+      @include screen('lg-s', max) {
+        display: none;
+      }
+    }
+
     #{$b}__pulse {
       position: absolute;
       right: -248px;
@@ -84,6 +106,8 @@
     }
 
     #{$b}__content {
+      position: relative;
+      z-index: 1;
       display: flex;
       max-width: 950px;
       margin-left: auto;
@@ -150,16 +174,25 @@
 
   &_features {
     position: relative;
-    padding-top: 149px;
-    padding-bottom: 104px;
 
-    @include screen('md', max) {
-      padding-top: 110px;
-      padding-bottom: 60px;
+    .svg-block {
+      height: 149px;
+
+      @include screen('md', max) {
+        height: 110px;
+      }
+
+      @include screen('sm', max) {
+        height: 90px;
+      }
     }
 
-    @include screen('sm', max) {
-      padding-top: 90px;
+    #{$b}__wrapper {
+      padding-bottom: 104px;
+
+      @include screen('md', max) {
+        padding-bottom: 60px;
+      }
     }
 
     #{$b}__header {
@@ -202,6 +235,21 @@
     @include screen('sm', max) {
       padding-top: 90px;
       padding-bottom: 90px;
+    }
+
+    #{$b}__bg-img {
+      $width: 1920px;
+
+      position: absolute;
+      top: 115px;
+      left: 50%;
+      margin-left: -$width/2;
+      width: $width;
+      pointer-events: none;
+
+      @include screen('lg-s', max) {
+        display: none;
+      }
     }
 
     #{$b}__header {
@@ -288,6 +336,8 @@
     }
 
     #{$b}__img {
+      display: block;
+      width: 100%;
       max-width: 100%;
     }
 

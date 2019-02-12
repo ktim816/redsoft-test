@@ -1,11 +1,15 @@
-mixin section()
+mixin section(hasContainer=true)
   +b.SECTION.section&attributes(attributes)
-    .container.js-sr.js-sr_1
+    if (hasContainer)
+      .container
+        block
+    else
       block
 
-mixin section-without-container()
-  +b.SECTION.section&attributes(attributes)
-    block
+mixin section-wrapper()
+  +e.wrapper&attributes(attributes)
+    .container
+      block
 
 mixin section-header(title)
   +e.header&attributes(attributes)
@@ -18,3 +22,7 @@ mixin section-content()
 mixin section-footer(text)
   +e.footer&attributes(attributes)
     +e.P.description!= text
+
+mixin section-bg-img(src)
+  +e.IMG(src=src).bg-img&attributes(attributes)
+    block

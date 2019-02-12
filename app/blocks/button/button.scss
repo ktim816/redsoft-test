@@ -20,7 +20,7 @@
     }
   }
 
-  &_theme-transparent {
+  &_transparent {
     @include text-normal;
 
     $color-button: #5489c3;
@@ -41,7 +41,7 @@
     }
   }
 
-  &_theme-raspberry {
+  &_raspberry {
     @include text-button;
 
     $color-button: #e70067;

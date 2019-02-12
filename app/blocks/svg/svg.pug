@@ -1,0 +1,6 @@
+mixin svg-block()
+  +b.SVG(xmlns='http://www.w3.org/2000/svg').svg-block&attributes(attributes)
+    block
+
+mixin ellipse(axysX, axysY, radiusX, radiusY)
+  ellipse(cx=axysX cy=axysY rx=radiusX ry=radiusY)

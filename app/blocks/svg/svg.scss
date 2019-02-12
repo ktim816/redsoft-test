@@ -1,0 +1,16 @@
+.svg-block {
+  display: block;
+
+  $this: &;
+
+  &_wide {
+    width: 100%;
+  }
+
+  &_light-gray {
+
+    ellipse {
+      fill: $color-bg-gray;
+    }
+  }
+}
